@@ -1,4 +1,3 @@
-cat << EOF > workloads/eks-example-dep.yaml
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -45,4 +44,3 @@ spec:
           httpGet:
             path: /
             port: http
-EOF
