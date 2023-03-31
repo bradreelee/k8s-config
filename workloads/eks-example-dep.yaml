@@ -7,7 +7,6 @@ metadata:
   labels:
     app: eks-example
   annotations:
-
     # Container Image Automated Updates
     flux.weave.works/automated: "true"
     # do not apply this manifest on the cluster
@@ -26,7 +25,7 @@ spec:
       - name: eks-example
         image: 184495359182.dkr.ecr.ap-northeast-2.amazonaws.com/eks-example:70b86249
         imagePullPolicy: IfNotPresent
-resources:
+        resources:
           requests: 
             memory: "64Mi"
             cpu: "200m"
