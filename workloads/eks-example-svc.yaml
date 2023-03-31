@@ -7,10 +7,10 @@ metadata:
     app: eks-example
 spec:
   type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: http
+      protocol: TCP
+      name: http
   selector:
     app: eks-example
-  ports:
-    - protocol: TCP
-      name: http
-      port: 80
-      targetPort: http
