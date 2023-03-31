@@ -19,25 +19,25 @@ spec:
         app: eks-example
     spec:
       containers:
-        - name: eks-example
-          image: 184495359182.dkr.ecr.ap-northeast-2.amazonaws.com/eks-example:70b86249
-          imagePullPolicy: IfNotPresent
-          resources:
-            requests:
-              memory: 64Mi
-              cpu: 200m
-            limits:
-              memory: 64Mi
-              cpu: 400m
-          ports:
-            - containerPort: 80
-              name: http
-              protocol: TCP
-          livenessProbe:
-            httpGet:
-              path: /
-              port: http
-          readinessProbe:
-            httpGet:
-              path: /
-              port: http
+      - name: eks-example
+        image: 184495359182.dkr.ecr.ap-northeast-2.amazonaws.com/eks-example:41e8b950
+        imagePullPolicy: IfNotPresent
+        resources:
+          requests:
+            memory: 64Mi
+            cpu: 200m
+          limits:
+            memory: 64Mi
+            cpu: 400m
+        ports:
+        - containerPort: 80
+          name: http
+          protocol: TCP
+        livenessProbe:
+          httpGet:
+            path: /
+            port: http
+        readinessProbe:
+          httpGet:
+            path: /
+            port: http
